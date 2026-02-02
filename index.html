@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEEGIS SYSTEM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="glitch" data-text="AEEGIS SYSTEM">AEEGIS SYSTEM</h1>
+            <p class="subtitle">SECURE IMAGE STEGANOGRAPHY PROTOCOL</p>
+        </header>
+
+        <div class="main-panel">
+            <div class="panel upload-section">
+                <h3>1. DO ADD UR IMAGE</h3>
+                <input type="file" id="imageInput" accept="image/png">
+                <div class="preview-box">
+                    <img id="preview" src="" alt="Awaiting Signal...">
+                </div>
+                <p class="warning">*Must be .PNG (Lossless Format)</p>
+            </div>
+
+            <div class="panel control-section">
+                <h3>2. ENCRYPTION DATA</h3>
+                
+                <div class="mode-switch">
+                    <button id="btnModeEncrypt" class="active">ENCODE (HIDE)</button>
+                    <button id="btnModeDecrypt">DECODE (REVEAL)</button>
+                </div>
+
+                <textarea id="messageBox" placeholder="Enter secret payload here..."></textarea>
+                
+                <input type="password" id="passKey" placeholder="Enter AES-256 Key">
+                
+                <button id="actionBtn" class="cyber-btn">INITIATE PROCESS</button>
+            </div>
+        </div>
+
+        <canvas id="stegoCanvas" style="display:none;"></canvas>
+        
+        <div id="outputArea" class="hidden">
+            <h3>SYSTEM OUTPUT:</h3>
+            <p id="statusLog">Ready...</p>
+            <a id="downloadLink" href="#" download="aigis_secured.png">DOWNLOAD SECURED IMAGE</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

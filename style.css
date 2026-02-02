@@ -1,0 +1,158 @@
+body {
+    background-color: #050505; /* Hitam pekat */
+    color: #00ff41; /* Hijau Hacker */
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    border: 1px solid #333;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+    background: rgba(10, 10, 10, 0.95);
+}
+
+h1.glitch {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #ff0055; /* Efek glitch merah */
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #888;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00ff41;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.main-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.panel {
+    background: #111;
+    padding: 20px;
+    border: 1px solid #222;
+}
+
+/* Input Styles */
+input, textarea {
+    width: 100%;
+    background: #000;
+    border: 1px solid #00ff41;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Image Preview */
+.preview-box {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #333;
+    margin-bottom: 10px;
+    background: #000;
+}
+
+.preview-box img {
+    max-width: 100%;
+    max-height: 250px;
+}
+
+/* Buttons */
+.mode-switch {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.mode-switch button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    background: #111;
+    color: #888;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mode-switch button.active {
+    color: #000;
+}
+
+.cyber-btn {
+    width: 100%;
+    padding: 15px;
+    background: #00ff41;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.cyber-btn:hover {
+    box-shadow: 0 0 15px #00ff41;
+    color: #fff;
+}
+
+.warning {
+    color: #ff0055;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+/* Output Area */
+.hidden {
+    display: none;
+}
+
+#outputArea {
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#downloadLink {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00e5ff;
+    text-decoration: none;
+    border: 1px solid #00e5ff;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+#downloadLink:hover {
+    background: rgba(0, 229, 255, 0.2);
+    box-shadow: 0 0 15px #00e5ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-panel { grid-template-columns: 1fr; }
+}
